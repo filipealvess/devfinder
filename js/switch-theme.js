@@ -12,10 +12,16 @@ function updateToggleThemeButton(text, classes) {
 }
 
 function checkTheme() {
-  const theme = localStorage.getItem('theme') ?? 'light';
-  const themeIsDark = (theme === 'dark');
+  const colorSchemeIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let theme = 'light';
 
-  if (themeIsDark) {
+  if (colorSchemeIsDark) {
+    theme = 'dark';
+  }
+
+  theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : theme;
+
+  if (theme === 'dark') {
     body.classList.add('dark');
     updateToggleThemeButton('Tema claro', DARK_CLASSES);
   } else {
@@ -30,8 +36,7 @@ function saveTheme(theme) {
 
 function toggleTheme() {
   const currentTheme = localStorage.getItem('theme') ?? 'light';
-  const themeIsDark = (currentTheme === 'dark');
-  const newTheme = themeIsDark ? 'light' : 'dark';
+  const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
   
   saveTheme(newTheme);
   checkTheme();
