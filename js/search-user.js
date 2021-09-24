@@ -104,7 +104,9 @@ function showUserData(userData) {
       </div>
       <div title="Organização">
         <span class="fas fa-building"></span>
-        <p>${ company ? company : 'Indisponível' }</p>
+        <p ${ company == null ? 'class="not-available"' : '' }>
+          ${ company ? company : 'Indisponível' }
+        </p>
       </div>
     </section>
   `;
