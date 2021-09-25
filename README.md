@@ -1,6 +1,8 @@
 # Dev Finder
 Projeto de busca por perfis do GitHub criado com HTML, CSS e JavaScript puros.
 
+O design inicial foi produzido pelo [Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6) e recebeu algumas melhorias, chegando ao resultado final, que pode ser acessado em [filipealvess.github.io/devfinder](https://filipealvess.github.io/devfinder).
+
 ## Projeto
 Utilizando da [API Rest do GitHub](https://docs.github.com/rest), o projeto tem como objetivo oferecer ao usuário a possibilidade de buscar por perfis do GitHub e ver as informações dos mesmos na interface da aplicação.
 
